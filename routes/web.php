@@ -16,5 +16,12 @@ Route::get('/', function () { // Route é uma classe e o get é um metodo
 });
 
 Route::get('/ola/{nome}/{sobrenome}', function($nome, $sobrenome){ // Pode se usar echo ou Return
-    return "Ola! Seja bem vindo, $nome $sobrenome!"; 
+    return "Ola! Seja bem vindo, $nome $sobrenome!";  
+});
+
+Route::get('/seunome/{nome?}', function($nome=null){ // Adicionando a ? torna o parametro opcional
+    if (isset($nome))
+        echo "Ola! Seja bem vindo, $nome!"; 
+    else 
+        echo "voce não digitou nenhum nome.";
 });
