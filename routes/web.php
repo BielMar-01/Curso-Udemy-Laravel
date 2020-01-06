@@ -32,18 +32,27 @@ Route::get('/rotacomregras/{nome}/{n}', function($nome, $n){
 })->where('nome', '[A-Za-z]+')// Regras são feitas com where
     ->where('n', '[0-9]+');
 
-    Route::prefix('/app')->group(function() {
+Route::prefix('/aplicacao')->group(function() {// nomes ajudam na horas da organizaçaõ
 
-        Route::get('/', function(){
-            return view('app');
-        });
+    Route::get('/', function(){
+        return view('app');
+    })->name('app');
 
-        Route::get('/user', function(){
-            return view('user');
-        });
+    Route::get('/user', function(){
+        return view('user');
+    })->name('app.user');
 
-        Route::get('/profile', function(){
-            return view('profile');
-        });
-    });
+    Route::get('/profile', function(){
+        return view('profile');
+    })->name('app.profile');
+});
+
+Route::get('/produtos', function() {// não precisar ser necessariamente dentro de agrupamentos
+    echo "<h1> Produtos </h1>";
+    echo "<ol>";
+    echo "<li> Notebook </li>";
+    echo "<li> Impressora </li>";
+    echo "<li> Mouse </li>";
+    echo "</ol>";
+})->name('meusprodutos');
     
