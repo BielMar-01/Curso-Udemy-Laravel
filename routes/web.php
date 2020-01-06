@@ -25,3 +25,9 @@ Route::get('/seunome/{nome?}', function($nome=null){ // Adicionando a ? torna o 
     else 
         echo "voce não digitou nenhum nome.";
 });
+
+Route::get('/rotacomregras/{nome}/{n}', function($nome, $n){
+    for($i=0;$i<$n;$i++)
+        echo "Ola! Seja bem vindo, $nome!  <br> ";  
+})->where('nome', '[A-Za-z]+')// Regras são feitas com where
+    ->where('n', '[0-9]+');
