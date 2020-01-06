@@ -1,0 +1,1 @@
+<h1>App</h1><?php /**PATH /home/gabriel/code/projetoUdemy/resources/views/app.blade.php ENDPATH**/ ?>

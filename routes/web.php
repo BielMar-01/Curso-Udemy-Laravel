@@ -31,3 +31,19 @@ Route::get('/rotacomregras/{nome}/{n}', function($nome, $n){
         echo "Ola! Seja bem vindo, $nome!  <br> ";  
 })->where('nome', '[A-Za-z]+')// Regras são feitas com where
     ->where('n', '[0-9]+');
+
+    Route::prefix('/app')->group(function() {
+
+        Route::get('/', function(){
+            return view('app');
+        });
+
+        Route::get('/user', function(){
+            return view('user');
+        });
+
+        Route::get('/profile', function(){
+            return view('profile');
+        });
+    });
+    

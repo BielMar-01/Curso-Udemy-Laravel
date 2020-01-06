@@ -1,0 +1,1 @@
+<h1>User</h1><?php /**PATH /home/gabriel/code/projetoUdemy/resources/views/user.blade.php ENDPATH**/ ?>
