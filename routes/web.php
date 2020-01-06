@@ -55,4 +55,13 @@ Route::get('/produtos', function() {// não precisar ser necessariamente dentro 
     echo "<li> Mouse </li>";
     echo "</ol>";
 })->name('meusprodutos');
-    
+
+
+//Redirecionamento serve para levar voce para outra rota
+Route::redirect('todosprodutos1', 'produtos', 301);
+
+
+//Outro jeito de fazer redirecionamento
+Route::get('todosprodutos2', function(){
+    return redirect()->route('meusprodutos');
+});
