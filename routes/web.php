@@ -11,6 +11,8 @@
 |
 */
 
+use Illuminate\Http\Request;
+
 Route::get('/', function () { // Route é uma classe e o get é um metodo 
     return view('welcome'); // Para listar as rotas e so colocar "$ php artisan route:list"
 });
@@ -64,4 +66,26 @@ Route::redirect('todosprodutos1', 'produtos', 301);
 //Outro jeito de fazer redirecionamento
 Route::get('todosprodutos2', function(){
     return redirect()->route('meusprodutos');
+});
+
+///////////////////////////////////
+
+Route::post('/requisicoes', function(Request $request) {// Post é algo novo como criar usuarios ou produtos
+    return 'Hello POST';   
+}); // CSRF - È tratado da forma de um token para ser mais seguro todas as requisições tirando o get precisam do CSRF
+
+Route::delete('/requisicoes', function(Request $request) {
+    return 'Hello DELETE';   
+});
+
+Route::put('/requisicoes', function(Request $request) {
+    return 'Hello PUT';   
+});
+
+Route::patch('/requisicoes', function(Request $request) {
+    return 'Hello PATCH';   
+});
+
+Route::options('/requisicoes', function(Request $request) {
+    return 'Hello OPTIONS';   
 });
