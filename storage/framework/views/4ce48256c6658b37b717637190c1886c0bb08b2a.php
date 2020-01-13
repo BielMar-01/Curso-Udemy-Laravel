@@ -1,4 +1,4 @@
-<h3>Clientes</h3>
+<h3><?php echo e($titulo); ?></h3>
 <a href="<?php echo e(route('clientes.create')); ?>">Novo Cliente</a>
 
 <ul>

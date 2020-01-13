@@ -34,9 +34,18 @@ class ClienteControlador extends Controller
     public function index()
     {
         $clientes = session('clientes');
-        return view('clientes.index', compact(['clientes']));
+        $titulo = "Todos os clientes:";//Variavel para ser chamada no with
+        return view('clientes.index', 
+            ['clientes'=>$clientes, 'titulo'=>$titulo]);//Outra passagem de parametro
+        //return view('clientes.index', compact(['clientes', 'titulo']));//Outra passagem de parametro
+        /*
+        return view('clientes.index')
+            ->with('clientes', $clientes)// With serve como outro mode de passar parametros
+            ->with('titulo', "Todos os clientes:");//Serve para deixar um texto fixo no html da view
+            ->with('titulo', $titulo);//Outro metodo de passar parametros para view
+        */
+        //return view('clientes.index', compact(['clientes']));
     }
-
     /**
      * Show the form for creating a new resource.
      *
