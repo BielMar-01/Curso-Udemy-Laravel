@@ -21,7 +21,8 @@ class ClienteControlador extends Controller
             session(['clientes' => $this->clientes]);
     }
 
-    private function getIndex($id, $clientes) {
+    private function getIndex($id, $clientes) 
+    {
         $ids = array_column($clientes, 'id');
         $index = array_search($id, $ids);
         return $index;
@@ -34,7 +35,7 @@ class ClienteControlador extends Controller
     public function index()
     {
         $clientes = session('clientes');
-        $titulo = "Todos os clientes:";//Variavel para ser chamada no with
+        $titulo = "Todos os clientes :";//Variavel para ser chamada no with
         return view('clientes.index', 
             ['clientes'=>$clientes, 'titulo'=>$titulo]);//Outra passagem de parametro
         //return view('clientes.index', compact(['clientes', 'titulo']));//Outra passagem de parametro
