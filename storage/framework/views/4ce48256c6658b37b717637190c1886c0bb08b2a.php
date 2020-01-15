@@ -22,6 +22,43 @@
         <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
     </ul>
 
+    <hr>
+
+    <?php for($i=0;$i<10;$i++): ?><!-- Outro tipo de loop -->
+        <?php echo e($i); ?>,
+    <?php endfor; ?>
+    
+    <br>
+
+    <?php for($i=0;$i<count($clientes);$i++): ?><!-- Outro tipo de loop -->
+        <?php echo e($clientes[$i]['nome']); ?>,
+    <?php endfor; ?>
+
+    <br>
+    
+
+    <?php $__currentLoopData = $clientes; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $c): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?><!-- Maneira de loop que o laravel disponibiliza -->
+        <?php echo e($c['nome']); ?>
+
+    <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+
+    <br>
+    
+
+    <?php $__currentLoopData = $clientes; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $c): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?><!-- Outra maneira de loop que o laravel disponibiliza -->
+        <p><!-- Automaticamento o larael cria uma variavel chamada loop que podemos acessar -->
+            <?php echo e($c['nome']); ?> |
+            <?php if($loop->first): ?>
+                (primeiro) |
+            <?php endif; ?>
+            <?php if($loop->last): ?>
+                (ultimo) |
+            <?php endif; ?>
+            (<?php echo e($loop->index); ?>) - <?php echo e($loop->iteration); ?> / <?php echo e($loop->count); ?>
+
+        </p> 
+    <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+
     <?php else: ?>
 
     <h4>Não exitem clientes cadastrados.</h4>

@@ -22,6 +22,41 @@
         @endforeach
     </ul>
 
+    <hr>
+
+    @for($i=0;$i<10;$i++)<!-- Outro tipo de loop -->
+        {{ $i }},
+    @endfor
+    
+    <br>
+
+    @for($i=0;$i<count($clientes);$i++)<!-- Outro tipo de loop -->
+        {{ $clientes[$i]['nome'] }},
+    @endfor
+
+    <br>
+    
+
+    @foreach ($clientes as $c)<!-- Maneira de loop que o laravel disponibiliza -->
+        {{ $c['nome'] }}
+    @endforeach
+
+    <br>
+    
+
+    @foreach ($clientes as $c)<!-- Outra maneira de loop que o laravel disponibiliza -->
+        <p><!-- Automaticamento o larael cria uma variavel chamada loop que podemos acessar -->
+            {{ $c['nome'] }} |
+            @if($loop->first)
+                (primeiro) |
+            @endif
+            @if($loop->last)
+                (ultimo) |
+            @endif
+            ({{ $loop->index }}) - {{ $loop->iteration }} / {{ $loop->count }}
+        </p> 
+    @endforeach
+
     @else
 
     <h4>Não exitem clientes cadastrados.</h4>
