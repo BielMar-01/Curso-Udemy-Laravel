@@ -90,7 +90,13 @@ Route::get('/', function () { // Route é uma classe e o get é um metodo
     return view('welcome'); // Para listar as rotas e so colocar "$ php artisan route:list"
 });
 
-Route::get('produtos', 'MeuControlador@produtos');
+Route::get('produtos', function() {
+    return view('outras.produtos');
+})->name('produtos');
+Route::get('departamentos', function() {
+    return view('outras.departamentos');
+})->name('departamentos');
+
 Route::get('nome', 'MeuControlador@getNome');
 Route::get('idade', 'MeuControlador@getIdade');
 Route::get('multiplicar/{n1}/{n2}', 'MeuControlador@multiplicar');

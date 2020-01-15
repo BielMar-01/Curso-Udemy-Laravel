@@ -11,9 +11,12 @@
         <div class="col1">
             <div class="menu">
                 <ul>
-                    <li><a class="active" href="<?php echo e(route('clientes.index')); ?>">Clientes</a></li>
-                    <li><a href="">Produtos</a></li>
-                    <li><a href="">Departamentos</a></li>
+                    <li><a class="<?php echo e(request()->routeIs('clientes.*') ? 'active' : ''); ?>" 
+                        href="<?php echo e(route('clientes.index')); ?>">Clientes</a></li>
+                    <li><a class="<?php echo e(request()->routeIs('produtos') ? 'active' : ''); ?>"
+                        href="<?php echo e(route('produtos')); ?>">Produtos</a></li>
+                    <li><a class="<?php echo e(request()->routeIs('departamentos') ? 'active' : ''); ?>"
+                        href="<?php echo e(route('departamentos')); ?>">Departamentos</a></li>
                 </ul>
             </div>
             
