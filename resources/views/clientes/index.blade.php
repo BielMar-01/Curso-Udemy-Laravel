@@ -1,5 +1,7 @@
 @extends('layouts.principal') <!-- Serve para exterder o layout escolhido-->
 
+@section('titulo', 'Clientes')
+    
 @section('conteudo') <!-- Serve para chamar nomear um layout por seção que sera chamado depois-->
     
     <h3>{{$titulo}}</h3>

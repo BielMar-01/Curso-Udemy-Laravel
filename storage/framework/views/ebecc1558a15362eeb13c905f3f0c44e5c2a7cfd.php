@@ -1,3 +1,5 @@
+<?php $__env->startSection('titulo', 'Produtos'); ?>
+
 <?php $__env->startSection('conteudo'); ?>
     <h3>Produtos</h3>
 

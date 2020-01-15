@@ -1,3 +1,5 @@
+<?php $__env->startSection('titulo', 'Clientes Detalhes'); ?>
+
 <?php $__env->startSection('conteudo'); ?>
     <h3>Informações do Cliente</h3>
 

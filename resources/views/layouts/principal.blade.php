@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Views</title>
+    <title>@yield('titulo')</title>
     <link rel="stylesheet" href="{{ asset('css/principal.css') }}"> <!--Asset serve para pegar arquivos do public -->
 </head>
 <body>

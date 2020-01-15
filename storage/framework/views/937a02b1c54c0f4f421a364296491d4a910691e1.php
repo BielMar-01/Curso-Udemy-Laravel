@@ -1,3 +1,5 @@
+<?php $__env->startSection('titulo', 'Clientes Edit'); ?>
+
 <?php $__env->startSection('conteudo'); ?>
     <h3>Novo Cliente</h3>
 

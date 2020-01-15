@@ -1,5 +1,7 @@
  <!-- Serve para exterder o layout escolhido-->
 
+<?php $__env->startSection('titulo', 'Clientes'); ?>
+    
 <?php $__env->startSection('conteudo'); ?> <!-- Serve para chamar nomear um layout por seção que sera chamado depois-->
     
     <h3><?php echo e($titulo); ?></h3>
