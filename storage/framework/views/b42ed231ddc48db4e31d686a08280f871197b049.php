@@ -10,22 +10,22 @@
         <li>Roupas</li>
     </ul>
 
-<?php $__env->startComponent('components.alerta',['titulo'=>'Erro Fatal', 'tipo'=>'info']); ?>
+<?php $__env->startComponent('components.alerta', ['titulo'=>'Erro Fatal', 'tipo'=>'info']); ?>
 <p><Strong>Erro inesperado</Strong></p>
 <p>Ocorreu um erro inesperado</p>
 <?php echo $__env->renderComponent(); ?>
 
-<?php $__env->startComponent('components.alerta',['titulo'=>'Erro Fatal', 'tipo'=>'error']); ?>
+<?php $__env->startComponent('components.alerta', ['titulo'=>'Erro Fatal', 'tipo'=>'error']); ?>
 <p><Strong>Erro inesperado</Strong></p>
 <p>Ocorreu um erro inesperado</p>
 <?php echo $__env->renderComponent(); ?>
 
-<?php $__env->startComponent('components.alerta',['titulo'=>'Erro Fatal', 'tipo'=>'success']); ?>
+<?php $__env->startComponent('components.alerta', ['titulo'=>'Erro Fatal', 'tipo'=>'success']); ?>
 <p><Strong>Erro inesperado</Strong></p>
 <p>Ocorreu um erro inesperado</p>
 <?php echo $__env->renderComponent(); ?>
 
-<?php $__env->startComponent('components.alerta',['titulo'=>'Erro Fatal', 'tipo'=>'warning']); ?>
+<?php $__env->startComponent('components.alerta', ['titulo'=>'Erro Fatal', 'tipo'=>'warning']); ?>
 <p><Strong>Erro inesperado</Strong></p>
 <p>Ocorreu um erro inesperado</p>
 <?php echo $__env->renderComponent(); ?>

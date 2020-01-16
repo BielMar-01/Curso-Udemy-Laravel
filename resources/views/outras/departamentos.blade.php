@@ -12,24 +12,24 @@
         <li>Roupas</li>
     </ul>
 
-@component('components.alerta',['titulo'=>'Erro Fatal', 'tipo'=>'info'])
+@alerta(['titulo'=>'Erro Fatal', 'tipo'=>'info'])
 <p><Strong>Erro inesperado</Strong></p>
 <p>Ocorreu um erro inesperado</p>
-@endcomponent
+@endalerta
 
-@component('components.alerta',['titulo'=>'Erro Fatal', 'tipo'=>'error'])
+@alerta(['titulo'=>'Erro Fatal', 'tipo'=>'error'])
 <p><Strong>Erro inesperado</Strong></p>
 <p>Ocorreu um erro inesperado</p>
-@endcomponent
+@endalerta
 
-@component('components.alerta',['titulo'=>'Erro Fatal', 'tipo'=>'success'])
+@alerta(['titulo'=>'Erro Fatal', 'tipo'=>'success'])
 <p><Strong>Erro inesperado</Strong></p>
 <p>Ocorreu um erro inesperado</p>
-@endcomponent
+@endalerta
 
-@component('components.alerta',['titulo'=>'Erro Fatal', 'tipo'=>'warning'])
+@alerta(['titulo'=>'Erro Fatal', 'tipo'=>'warning'])
 <p><Strong>Erro inesperado</Strong></p>
 <p>Ocorreu um erro inesperado</p>
-@endcomponent
+@endalerta
 
 @endsection
