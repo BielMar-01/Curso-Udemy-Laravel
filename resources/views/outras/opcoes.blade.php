@@ -5,10 +5,10 @@
 @section('conteudo')
 <div>
     <ul class="options">
-        <li><a class="warning selected" href="{{ route('opcoes',1) }}">warning</a></li>
-        <li><a class="info selected"    href="{{ route('opcoes',2) }}">info</a></li>
-        <li><a class="success selected" href="{{ route('opcoes',3) }}">success</a></li>
-        <li><a class="error selected"   href="{{ route('opcoes',4) }}">error</a></li>
+        <li><a class="warning href="{{ route('opcoes',1) }}">warning</a></li>
+        <li><a class="info    href="{{ route('opcoes',2) }}">info</a></li>
+        <li><a class="success href="{{ route('opcoes',3) }}">success</a></li>
+        <li><a class="error   href="{{ route('opcoes',4) }}">error</a></li>
     </ul>
 </div>
 
