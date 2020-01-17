@@ -17,6 +17,9 @@
                         href="<?php echo e(route('produtos')); ?>">Produtos</a></li>
                     <li><a class="<?php echo e(request()->routeIs('departamentos') ? 'active' : ''); ?>"
                         href="<?php echo e(route('departamentos')); ?>">Departamentos</a></li>
+                    <li><a class="<?php echo e(request()->routeIs('opcoes') ? 'active' : ''); ?>"
+                        href="<?php echo e(route('opcoes')); ?>">Opções</a></li>
+                </ul>
                 </ul>
             </div>
             
