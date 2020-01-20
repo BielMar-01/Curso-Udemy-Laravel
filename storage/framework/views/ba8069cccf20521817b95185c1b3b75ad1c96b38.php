@@ -3,10 +3,10 @@
 <?php $__env->startSection('conteudo'); ?>
 <div>
     <ul class="options">
-        <li><a class="warning selected" href="<?php echo e(route('opcoes',1)); ?>">warning</a></li>
-        <li><a class="info selected"    href="<?php echo e(route('opcoes',2)); ?>">info</a></li>
-        <li><a class="success selected" href="<?php echo e(route('opcoes',3)); ?>">success</a></li>
-        <li><a class="error selected"   href="<?php echo e(route('opcoes',4)); ?>">error</a></li>
+        <li><a class="warning href="<?php echo e(route('opcoes',1)); ?>">warning</a></li>
+        <li><a class="info    href="<?php echo e(route('opcoes',2)); ?>">info</a></li>
+        <li><a class="success href="<?php echo e(route('opcoes',3)); ?>">success</a></li>
+        <li><a class="error   href="<?php echo e(route('opcoes',4)); ?>">error</a></li>
     </ul>
 </div>
 
